@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/material.dart';
 
 class LogInScreen extends StatefulWidget {
@@ -8,8 +10,14 @@ class LogInScreen extends StatefulWidget {
 }
 
 class _LogInScreenState extends State<LogInScreen> {
+  final _formKey = GlobalKey<FormState>();
+  TextEditingController _userNameController = TextEditingController();
+  bool sk = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold();
   }
-}
+  }
+
+
+
