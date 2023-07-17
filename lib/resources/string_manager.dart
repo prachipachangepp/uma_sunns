@@ -3,9 +3,9 @@
 class AppString {
   ///Sign In screen
   static const String signinhead = "Sign In";
-  static const String email = "Email";
-  static const String password = "Password";
-  static const String forgetpass = "Forget Password ?";
+  static const String email = "email";
+  static const String password = "password";
+  static const String forgetpass = "Forget Password?";
   static const String signin = "Sign in";
 
   ///Forgot password screen
