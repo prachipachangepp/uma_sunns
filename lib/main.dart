@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:uma_sunns/presentation/thank_you.dart';
+import 'package:uma_sunns/LoginScreen.dart';
+import 'package:uma_sunns/resources/routs_manager.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,12 +12,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      onGenerateRoute: RouteGenerator.getRoute,
+      initialRoute: Routes.LogIn,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: ThankYouScreen(),
+      //home: LogInScreen(),
     );
   }
 }

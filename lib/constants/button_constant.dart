@@ -11,10 +11,10 @@ Widget ButtonWidget({
   required VoidCallback onPressed,
 }) {
   return Padding(
-    padding: const EdgeInsets.only(right: AppPadding.p20, left: AppPadding.p12),
+    padding: const EdgeInsets.only(),
     child: SizedBox(
-      width: AppSize.s290,
-      height: AppSize.s40,
+      width: double.infinity,
+      height: AppSize.s50,
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
