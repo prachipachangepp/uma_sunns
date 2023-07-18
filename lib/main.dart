@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:uma_sunns/presentation/forgot_pass_screen.dart';
+import 'package:uma_sunns/presentation/thank_you.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: ForgotPasswordScreen(),
+      home: ThankYouScreen(),
     );
   }
 }

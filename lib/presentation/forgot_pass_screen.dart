@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:uma_sunns/resources/color_manager.dart';
+import 'package:uma_sunns/resources/font_manager.dart';
 import 'package:uma_sunns/resources/string_manager.dart';
+import 'package:uma_sunns/resources/value_manager.dart';
+
+import '../constants/button_constant.dart';
+import '../resources/asset_manager.dart';
 
 class ForgotPasswordScreen extends StatefulWidget {
   const ForgotPasswordScreen({super.key});
@@ -21,69 +26,109 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
               Row(
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(top: 170, left: 30),
+                    padding: const EdgeInsets.only(
+                        top: AppPadding.p180, left: AppPadding.p25),
                     child: Text(
                       AppString.forgotpasshead,
                       style: TextStyle(
-                          fontSize: 36,
-                          fontWeight: FontWeight.w700,
+                          fontSize: FontSize.s40,
+                          fontWeight: FontWeightManager.bold,
                           color: ColorManager.navyblue),
                     ),
                   ),
                 ],
               ),
-              SizedBox(
-                height: 30,
+              const SizedBox(
+                height: AppSize.s25,
               ),
+
               ///email txt
               Row(
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(left: 30),
+                    padding: const EdgeInsets.only(left: AppPadding.p25),
                     child: Text(
                       AppString.email,
                       style: TextStyle(
-                          fontSize: 15.25,
-                          fontWeight: FontWeight.w500,
+                          fontSize: FontSize.s18,
+                          fontWeight: FontWeight.normal,
                           color: ColorManager.grey),
                     ),
                   ),
                 ],
               ),
-              SizedBox(
-                height: 5,
+              const SizedBox(
+                height: AppSize.s0,
               ),
+
+              ///emailfield
               Padding(
-                padding: EdgeInsets.only(
-                    left: MediaQuery.of(context).size.width / 13,
-                    right: MediaQuery.of(context).size.width / 19,
-                    top: MediaQuery.of(context).size.height / 50),
+                padding: const EdgeInsets.only(
+                    left: AppSize.s25, right: AppSize.s40, top: AppSize.s5),
                 child: Container(
-                  padding: EdgeInsets.only(
-                      top: MediaQuery.of(context).size.height / 500,
-                      left: MediaQuery.of(context).size.width / 30),
-                  height: MediaQuery.of(context).size.height / 22,
-                  width: MediaQuery.of(context).size.width / 1,
+                  height: AppSize.s40,
+                  width: AppSize.s300,
                   decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.shade400,
-                          blurStyle: BlurStyle.outer,
-                          blurRadius: 5,
-                          offset: Offset(0.0, 1.5),
-                        )
-                      ],
-                      border: Border.all(color: Colors.grey),
+                      border: Border.all(color: ColorManager.grey),
                       borderRadius: BorderRadius.circular(5.0)),
                   child: TextField(
                     keyboardType: TextInputType.emailAddress,
                     decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: '@',
-                        hintStyle: TextStyle(color: ColorManager.navyblue)),
+                      prefixIcon: Image.asset(ImageAssets.emailLogo),
+                      border: InputBorder.none,
+                    ),
                   ),
                 ),
               ),
+              const SizedBox(
+                height: AppSize.s8,
+              ),
+
+              ///text
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: AppPadding.p50,),
+                    child: Text(
+                      AppString.forgotsubtitle1,
+                      style: TextStyle(fontSize: FontSize.s14),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: AppPadding.p30),
+                    child: Text(
+                      AppString.forgotsubtitle2,
+                      style: TextStyle(
+                          fontSize: FontSize.s14, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ],
+              ),
+              Padding(
+                padding:const EdgeInsets.only(right: AppPadding.p40),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text(
+                      AppString.password,
+                      style: TextStyle(
+                          fontSize: FontSize.s14, fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: AppSize.s65,
+              ),
+
+              ///button
+              ButtonWidget(
+                  buttonText: AppString.changepassbtn,
+                  buttonColor: ColorManager.primary,
+                  textColor: ColorManager.white,
+                  fontWeight: FontWeightManager.bold,
+                  fontSize: FontSize.s20,
+                  onPressed: () {})
             ],
           ),
         ));
