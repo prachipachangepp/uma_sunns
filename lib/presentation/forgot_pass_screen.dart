@@ -121,33 +121,34 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                 ),
                 ///text
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: AppPadding.p8),
+                    const Padding(
+                      padding:  EdgeInsets.only(),
                       child: Text(
                         AppString.forgotsubtitle1,
                         style: TextStyle(fontSize: FontSize.s14),
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(),
+                   const Padding(
+                      padding:  EdgeInsets.only(right: AppPadding.p8),
                       child: Text(
                         AppString.forgotsubtitle2,
                         style: TextStyle(
-                            fontSize: FontSize.s14, fontWeight: FontWeight.bold),
+                            fontSize: FontSize.s16, fontWeight: FontWeight.bold),
                       ),
                     ),
                   ],
                 ),
-                Padding(
-                  padding:const EdgeInsets.only(right: AppPadding.p12),
+                const Padding(
+                  padding: EdgeInsets.only(right: AppPadding.p12),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Text(
                         AppString.password,
                         style: TextStyle(
-                            fontSize: FontSize.s14, fontWeight: FontWeight.bold),
+                            fontSize: FontSize.s16, fontWeight: FontWeight.bold),
                       ),
                     ],
                   ),

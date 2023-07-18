@@ -20,5 +20,6 @@ class AppString {
 
   ///Home Screen
   static const String home = "Home";
+  static const String notFoundRoute = "Page not Found";
 
 }
